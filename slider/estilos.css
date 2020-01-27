@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1050vh;
+    margin-top: 30px;
+}
+
+body{
+    background: #F5A9BC;
+}
+
+section{
+    width: 220px;
+    padding: 30px;
+    background: #F2F2F2;
+}
+
+section p{
+    font-size: 25px;
+}
+
+section h5{
+    font-size: 30px;
+}
+
+section button{
+    margin: 0px 30px;
+    margin-top: -10px;
+    margin-bottom: -30px;
+}

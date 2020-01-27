@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="animate.css">
+    <title>Para mi ratoncita</title>
+</head>
+<script src="vue.js"></script>
+<script src="wow.js"></script>
+<body>
+    <script>
+     new WOW(). init ();
+    </script>
+    <div class="container">
+    <center>
+        <h1>TE AMO MI RATONCITA</h1><br>
+        <br>
+        <h1>Eres todo para mi</h1>
+        <div v-show="num==0">
+        <br><br><br>
+        <b >TE AMO Y SI UNA PERSONA QUE LO MERECE TODO. ESA PERSONA ERES TÚ</b>
+        <br><br>
+        <img src="img/descarga.jpg" alt="">
+         </div>
+         <br>
+         <!--Imagen 1-->
+        <section v-show="num==1" class="animated fadeIn">
+            <h2>TE AMO</h2><br>
+            <img src="img/IMG-20191203-WA0013.jpg" alt="Mi amor" title="" width="200" height="180"><br><br>
+            <p class="animated fadeInUp">Contigo aprendí a que el amor es de dos, o si no no es nada</p>
+        </section>
+        <!--Imagen 2-->
+        <section v-show="num==2" class="animated fadeIn">
+            <h2>MI MUÑECA DE PORCELANA</h2><br>
+            <img src="img/IMG-20200116-WA0054.jpg" alt="Mi amor" width="200" height="180"><br><br>
+            <p class="animated fadeInUp">Gracias por darme la oportunidad de ser parte de tu vida. TE AMO INFINITAMENTE</p>
+        </section>
+        <!--Imagen 3-->
+        <section v-show="num==3" class="animated fadeIn">
+            <h2>SI NO ES CONTIGO. NO QUIERO NADA</h2><br>
+            <img src="img/IMG-20191222-WA0007.jpg" alt="" width="200" height="180"><br><br>
+            <p class="animated fadeInUp">Te conocí cuando menos lo esperaba. <br>
+            pero llegaste a mi cuando mas <br> <h5>LO NECESITABA</h5><br>
+        Gracias por ser esa persona que me alegra las jornadas</p>
+        </section>
+        <!--Imagen 4-->
+        <section v-show="num==4" class="animated fadeIn">
+            <h2>TU FELICIDAD, ES MI FELICIDAD</h2><br>
+            <img src="img/IMG-20191226-WA0090.jpg" alt="" width="200" height="180"><br><br>
+            <p class="animated fadeInUp">No hace falta que te recuerde que te amo, pero es que me gusta tanto decírtelo una y otra vez y verte sonreír...</p>
+        </section>
+        <!--Botones-->
+        <section v-if="num==4">
+                <button v-on:click="num--"><img src="img/back.png" alt="" width="40" height="40"></button>
+        </section>
+        <section v-else-if="num<1">
+                <button v-on:click="num++"><img src="img/next.png" alt="" width="40" height="40"></button>
+        </section>
+        <section v-else>
+            <button v-on:click="num--"><img src="img/back.png" alt="" width="40" height="40"></button> <button v-on:click="num++"><img src="img/next.png" alt="" width="40" height="40"></button>
+        </section>
+    </center>
+    <audio src="desconocidos.mp3" preload="none" controls autoplay></audio>
+    
+    </div>
+    <script>
+    new Vue({
+        el:".container",
+        data: {
+            num: 0
+        }
+    });
+    
+    
+    </script>
+</body>
+</html>
